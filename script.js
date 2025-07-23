@@ -1,5 +1,3 @@
-document.getElementById('form1').addEventListener('submit', getFormvalue);
-
   function getFormvalue(event) {
     event.preventDefault();
     
