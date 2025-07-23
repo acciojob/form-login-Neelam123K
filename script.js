@@ -1,16 +1,14 @@
 function getFormvalue(event) {
-    //Write your code here
-  event.preventDefault();
+    // Prevent the default form submission
+    event.preventDefault();
 
-  const form = document.getElementById('form1');
-  const firstName = form.fname.value.trim();
-  const lastName = form.lname.value.trim();
+    // Retrieve values from the input fields
+    const firstName = document.querySelector('input[name="fname"]').value.trim();
+    const lastName = document.querySelector('input[name="lname"]').value.trim();
 
-  if (!firstName && !lastName) {
-    alert("Please enter your first and last name.");
-    return;
-  }
+    // Concatenate the names
+    const fullName = `${firstName} ${lastName}`;
 
-  const fullName = `${firstName} ${lastName}`.trim();
-      alert(fullName);
+    // Display the full name using alert
+    alert(fullName);
 }
